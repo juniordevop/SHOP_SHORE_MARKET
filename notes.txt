@@ -1,0 +1,38 @@
+# créer une simle interface web
+
+# import libs
+import streamlit as st
+
+# afficher du texte sur le navig
+st.write ("bonjour, bv à la form dama")
+
+# ctrl + s
+# etre ds le bon dossier
+# lancer une ligne de cmd pour démarrer le server web
+# streamlit run nom_fichier.py --server.port=num_port
+    # streamlit run first_stream.py --server.port=80
+    # streamlit run first_stream.py --server.port=443
+    # streamlit run first_stream.py
+
+# faire une interface pour récupérer le nom et le salaire
+
+    # champ de saisi du nom
+nom = st.text_input(label="saisir votre nom")
+
+    # champ de saisi du salaire
+compte = st.number_input(label="saisir le numéro de compte")
+
+    # champ de saisi du salaire
+salaire = st.number_input(label="saisir votre salaire")
+
+
+# Ajout bouton
+btn = st.button("submit")
+
+# ecouteur de clic
+if btn:
+    st.write(f"Le nom est : {nom}")
+    st.write(f"Le numéro de compte est : {compte}")
+    st.write(f"Le salaire est : {salaire}")
+
+# Faire appel à l'API avec les informations saisies
